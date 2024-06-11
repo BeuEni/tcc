@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --tom: #2586DF;
+    --subtom: #7ebbf5;
+    --branco: #fff;
+    --preto: #191815;
+}
+
+*{
+    font-family: "Armata", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .1s linear;
+}
+
+*::selection{
+    background-color: var(--tom);
+    color: var(--branco);
+}
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--subtom);
+    border-radius: 5rem;
+}
+
+/*home*/
+.home{
+    margin-top: 6rem;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    margin-bottom: 100px;
+}
+
+.home .row .content{
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.home .row .img{
+    flex: 1 1 45rem;
+}
+
+.home .row .img img{
+    margin-top: 4rem;
+    width: 100%;
+    height: 90%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 18px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.home .row .content h3{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    color: var(--preto);
+    cursor: pointer;
+}
+
+.home .row .content h3 span{
+    color: var(--tom);
+}
+
+.home .row .content h3 span:hover{
+    color: var(--subtom);
+    cursor: pointer;
+}
+/*home fim*/
+
+/*sobre*/
+.sobre .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.sobre .row .sobreimg{
+    flex: 1 1 40rem;
+}
+.sobre .row .sobreimg img{
+    width: 100%;
+    border-radius: 20px;
+}
+.sobre .row .content{
+    flex: 1 1 40rem;
+    text-align:left;
+    margin-bottom: 35px;
+}
+.sobre .row .content h3{
+    font-size: 3rem;
+    color: var(--preto);
+    text-align: center;
+}
+.sobre .row .content h3 span{
+    color: var(--tom);
+}
+.sobre .row .content h3 span:hover{
+    color: var(--subtom);
+}
+.sobre .row .content p{
+    padding: 1rem 0;
+    line-height: 1;
+    font-size: 1.4rem;
+    color: var(--preto);
+    margin-bottom: 20px;
+}
+.sobre .row .content .ctt{
+    background-color: var(--tom); /* Cor de fundo azul */
+    color: var(--branco); /* Cor do texto branco */
+    border: none;
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1.2rem;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+}
+.sobre .row .content .ctt:hover{
+    color: var(--branco);
+    background-color: var(--subtom);
+}
+/*sobre fim*/
+
+/*parceiros*/
+.heading{
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--preto);
+}
+.heading span{
+    color: var(--tom);
+    cursor: pointer;
+}
+.heading span:hover{
+    color: var(--subtom);
+    cursor: pointer;
+}
+.parceiros .slide{
+    width: 35rem;
+    border-radius: .5rem ;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+.parceiros .slide img{
+    height: 200px;
+    width: 200px;
+}
+.parceiros .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    color: var(--preto);
+}
+.parceiros .slide p{
+    line-height: 1.5;
+    font-size: 1.6rem;
+    color: var(--preto);
+}
+.swiper-pagination-bullet{
+    background-color: var(--preto);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--tom);
+}
+/*parceiros fim*/
+
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.7rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header .flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+}
+
+.header .flex .logo span:hover{
+    color: var(--tom);
+}
+
+.header .flex .logo .iconlogo{
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header .flex .navbar a{
+    margin-left: 2.5rem;
+    color: var(--preto);
+    font-size: 1.2rem;
+   
+}
+
+
+.header .flex .navbar .ctt {
+    background-color: var(--tom); /* Cor de fundo azul */
+    color: var(--branco); /* Cor do texto branco */
+    border: none;
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1.2rem;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+}
+
+.header .flex .navbar .ctt:hover{
+    color: var(--branco);
+    background-color: var(--subtom);
+}
+
+.header .flex .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header .flex .navbar a:hover{
+    color: var(--subtom);
+}
+
+#menu-bnt{
+    cursor: pointer;
+    color: var(--preto);
+    font-size: 3rem;
+    display: none;
+}
+
+#menu-bnt.fa-times{
+    transform: rotate(180deg);
+}
+
+/*media*/
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home .row .content h3{
+        font-size: 3rem;
+    }
+    
+}
+
+@media (max-width:768px){
+
+    #menu-bnt {
+        display: inline-block;
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        /*ADICIONAR BLUR NO FUNDO*/
+        border-bottom: .1rem solid rgb(150, 144, 144);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+
+    .header .flex .navbar .ctt {
+    background-color: var(--tom); /* Cor de fundo azul */
+    color: var(--branco); /* Cor do texto branco */
+    border: none;
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1.2rem;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+    display: block;
+    margin: 2rem;
+    text-align: center;
+    }
+
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .home .row .content h3{
+        font-size: 5rem;
+    }
+    
+}
